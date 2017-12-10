@@ -9,12 +9,6 @@
 const roleHarvester = require('role-harvester')
 
 function run(creep) {
-  if(!creep.memory.working && creep.carry.energy === creep.carryCapacity) {
-    creep.memory.working = true
-  } else if(creep.memory.working && creep.carry.energy === 0) {
-    creep.memory.working = false
-  }
-
   if(!creep.memory.working) {
     roleHarvester.run(creep)
   } else {

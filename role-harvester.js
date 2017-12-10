@@ -8,7 +8,7 @@
  */
 
  function run(creep, spawn) {
-   if(creep.carry.energy === creep.carryCapacity) {
+   if(creep.memory.working) {
      const building = determineDeliveryDestination(creep);
      const result = creep.transfer(building, RESOURCE_ENERGY);
 
